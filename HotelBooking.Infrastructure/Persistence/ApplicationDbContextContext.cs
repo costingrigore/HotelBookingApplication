@@ -1,13 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using HotelBooking.Domain.Entities;
+using HotelBooking.Infrastructure.Persistence.Seeding;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HotelBooking.Domain.Entities
+namespace HotelBooking.Infrastructure.Persistence
 {
-    public class Context : DbContext
+    public class ApplicationDbContextContext : DbContext
     {
-        public Context(DbContextOptions<Context> options) : base(options)
+        public ApplicationDbContextContext(DbContextOptions<ApplicationDbContextContext> options) : base(options)
         { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
