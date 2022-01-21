@@ -12,7 +12,8 @@ namespace HotelBooking.Domain.Entities
     {
         [Key]
         public int BookingId { get; set; }
-        public DateTime BookingDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public int UserId { get; set; }
         public int HotelId { get; set; }
         public int RoomId { get; set; }

@@ -7,9 +7,9 @@ using System.Text;
 
 namespace HotelBooking.Infrastructure.Persistence
 {
-    public class ApplicationDbContextContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContextContext(DbContextOptions<ApplicationDbContextContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
