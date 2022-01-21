@@ -28,7 +28,7 @@ namespace HotelBookingApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContextContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseInMemoryDatabase("BookingDatabase"));
             services.AddControllers();
         }

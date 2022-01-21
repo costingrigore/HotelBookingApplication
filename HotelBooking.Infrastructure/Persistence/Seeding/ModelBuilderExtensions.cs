@@ -11,11 +11,11 @@ namespace HotelBooking.Infrastructure.Persistence.Seeding
         public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BookingEntity>().HasData(
-                new BookingEntity { BookingId = 1, BookingDate = new DateTime(2021, 12, 30), UserId = 1, HotelId = 2, RoomId = 7 },
-                new BookingEntity { BookingId = 2, BookingDate = new DateTime(2021, 11, 20), UserId = 2, HotelId = 2, RoomId = 10},
-                new BookingEntity { BookingId = 3, BookingDate = new DateTime(2021, 12, 21), UserId = 3, HotelId = 1, RoomId = 5 },
-                new BookingEntity { BookingId = 4, BookingDate = new DateTime(2021, 08, 03), UserId = 2, HotelId = 1, RoomId = 3 },
-                new BookingEntity { BookingId = 5, BookingDate = new DateTime(2021, 12, 08), UserId = 3, HotelId = 2, RoomId = 9 });
+                new BookingEntity { BookingId = 1, StartDate = new DateTime(2021, 12, 30), EndDate = new DateTime(2021, 12, 30), UserId = 1, HotelId = 2, RoomId = 7 },
+                new BookingEntity { BookingId = 2, StartDate = new DateTime(2021, 11, 20), EndDate = new DateTime(2021, 12, 30), UserId = 2, HotelId = 2, RoomId = 10},
+                new BookingEntity { BookingId = 3, StartDate = new DateTime(2021, 12, 21), EndDate = new DateTime(2021, 12, 30), UserId = 3, HotelId = 1, RoomId = 5 },
+                new BookingEntity { BookingId = 4, StartDate = new DateTime(2021, 08, 03), EndDate = new DateTime(2021, 12, 30), UserId = 2, HotelId = 1, RoomId = 3 },
+                new BookingEntity { BookingId = 5, StartDate = new DateTime(2021, 12, 08), EndDate = new DateTime(2021, 12, 30), UserId = 3, HotelId = 2, RoomId = 9 });
 
             modelBuilder.Entity<HotelEntity>().HasData(
                 new HotelEntity { HotelId = 1, Name = "Plaza Hotel" },
